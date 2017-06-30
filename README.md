@@ -1,7 +1,7 @@
 # promsortrules
 
-Sort and reformat prometheus rules files alphabetically
-
+Sort prometheus rules files alphabetically by rule name. 
+promsortrules reformats the rule definitions in a consistent manner.
 
 ## Installation and usage
 
@@ -12,12 +12,11 @@ promsortrules alerts.rules
 
 ## Formatting
 
-I use this tool to easily compare different prometheus rules files.
+I use this tool to compare prometheus rules files more easily.
 
- * You could use it to format your files in a consistent way: `promsortrules alerts.rules | tee tmp.rules && mv tmp.rules alerts.rules`
- * YMMV - I haven't thoroughly tested that the output, but it uses prometheus' parser completely.
- * Note: promsortrules reformats your rules in ways you might not love. It's a bit squashed, but it's consistent, which makes me happy.
-
+ * You _could_ use its output to format your files in a consistent way: `promsortrules alerts.rules | tee tmp.rules && mv tmp.rules alerts.rules`
+ * YMMV - I haven't thoroughly tested that the output works, but it is simply using prometheus' parser, so it should be OK. Just test it before using it in production.
+ * Note: promsortrules reformats your rules in ways you might not love. It's a bit squashed, but importantly it's consistent, which does make me happy.
 
 ## Thanks
 
